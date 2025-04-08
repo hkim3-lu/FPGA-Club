@@ -12,26 +12,40 @@
       background: #ffffff;
       color: #333;
       line-height: 1.6;
-      font-size: 1rem; /* 모바일에 맞춰 기본 폰트 크기 조정 */
+      font-size: 1rem;
     }
     header {
+      position: relative;
       background: url('fpga.jpg') center/cover no-repeat;
       background-size: cover;
       background-position: center;
       color: #fff;
-      height: 250px; /* 높이 고정 */
+      height: 250px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       text-align: center;
+      padding-bottom: 2rem;
+      overflow: hidden;
     }
-
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4); /* 투명 검정 레이어 */
+      z-index: 1;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+      margin: 0.3rem 0;
+    }
     nav {
       background: #0055a5;
       display: flex;
-      flex-wrap: wrap; /* 모바일 줄바꿈 추가 */
       justify-content: center;
+      flex-wrap: wrap;
       padding: 0.5rem 0;
     }
     nav a {
@@ -41,18 +55,15 @@
       font-weight: bold;
     }
     section {
-      padding: 1rem; /* 모바일에서도 여백 줄임 */
+      padding: 2rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
-    .hero {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-width: 100%; /* 이미지가 화면 넘지 않게 */
-    }
     h2 {
       margin-top: 2rem;
+    }
+    .news-item {
+      margin-bottom: 1rem;
     }
     footer {
       text-align: center;
@@ -60,9 +71,6 @@
       background: #f4f4f4;
       font-size: 0.9rem;
       margin-top: 2rem;
-    }
-    .news-item {
-      margin-bottom: 1rem;
     }
   </style>
 </head>
