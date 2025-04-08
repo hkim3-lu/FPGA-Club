@@ -12,25 +12,40 @@
       background: #ffffff;
       color: #333;
       line-height: 1.6;
-      font-size: 1rem; /* 모바일 대응 글자 크기 */
+      font-size: 1rem;
     }
     header {
+      position: relative;
       background: url('fpga.jpg') center/cover no-repeat;
       background-size: cover;
       background-position: center;
       color: #fff;
-      height: 250px; /* 높이 고정 */
+      height: 250px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       text-align: center;
+      padding-bottom: 2rem;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+      margin: 0.3rem 0;
     }
     nav {
       background: #0055a5;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap; /* 모바일 줄바꿈 추가 */
+      flex-wrap: wrap;
       padding: 0.5rem 0;
     }
     nav a {
@@ -40,7 +55,7 @@
       font-weight: bold;
     }
     section {
-      padding: 1rem; /* 모바일 padding 조정 */
+      padding: 2rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
@@ -55,7 +70,7 @@
       border-radius: 5px;
       background: #f9f9f9;
       transition: box-shadow 0.3s;
-      width: 100%; /* 모바일 대응 추가 */
+      width: 100%;
       box-sizing: border-box;
     }
     .news-item:hover {
@@ -70,6 +85,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -83,7 +99,7 @@
   <a href="club.html">Club</a>
   <a href="index.html#research">Research</a>
   <a href="index.html#publications">Publications</a>
-  <a href="board.html">News</a>
+  <a href="board.html">Board</a>
   <a href="contact.html">Contact</a>
 </nav>
 
