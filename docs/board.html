@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News Board - FPGA-AI-Embedded Club</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: url('fpga.png') center/cover no-repeat;
+      color: #fff;
+      padding: 6rem 0;
+      text-align: center;
+    }
+    nav {
+      background: #0055a5;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .news-board {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .news-item {
+      border: 1px solid #ccc;
+      padding: 1.5rem;
+      border-radius: 5px;
+      background: #f9f9f9;
+      transition: box-shadow 0.3s;
+    }
+    .news-item:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #f4f4f4;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>News Board</h1>
+  <p>Stay updated with the latest news from FPGA-AI-Embedded Club</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="club.html">Club</a>
+  <a href="index.html#research">Research</a>
+  <a href="index.html#publications">Publications</a>
+  <a href="board.html">News</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+  <h2>Latest News</h2>
+  <div class="news-board">
+    <div class="news-item">
+      <h3>04/17/2025 - FPGA-AI Club Kick-off Meeting</h3>
+      <p>Join us for the FPGA-AI-Embedded Club's first meeting at 3:00 PM in AS138S. We look forward to seeing you!</p>
+    </div>
+    <div class="news-item">
+      <h3>03/30/2025 - New Research Project Launched</h3>
+      <p>Excited to announce a new research project focusing on low-power FPGA design techniques for AI acceleration.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 FPGA-AI-Embedded Club</p>
+</footer>
+
+</body>
+</html>
