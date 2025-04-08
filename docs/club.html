@@ -12,27 +12,31 @@
       background: #ffffff;
       color: #333;
       line-height: 1.6;
+      font-size: 1rem; /* 모바일 대응 글자 크기 */
     }
     header {
-      background: URL('fpga.jpg') center/cover no-repeat;
+      background: url('fpga.jpg') center/cover no-repeat;
+      background-size: cover;
+      background-position: center;
       color: #fff;
-      padding: 1rem 0;
+      padding: 6rem 0;
       text-align: center;
     }
     nav {
       background: #0055a5;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap; /* 모바일 줄바꿈 추가 */
       padding: 0.5rem 0;
     }
     nav a {
-      margin: 0 1rem;
+      margin: 0.5rem;
       text-decoration: none;
       color: #fff;
       font-weight: bold;
     }
     section {
-      padding: 2rem;
+      padding: 1rem; /* 모바일 padding 조정 */
       max-width: 1000px;
       margin: auto;
     }
@@ -42,6 +46,7 @@
     ul {
       list-style: disc inside;
       margin-bottom: 2rem;
+      padding-left: 1rem;
     }
     footer {
       text-align: center;
