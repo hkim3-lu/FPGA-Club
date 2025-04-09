@@ -14,23 +14,23 @@
       line-height: 1.6;
       font-size: 1rem;
     }
-     header {
+    header {
       position: relative;
       background: url('fpga.jpg') center/cover no-repeat;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       color: #fff;
-      height: 250px;
+      min-height: 400px; /* 수정: 높이를 고정하지 않고 자연스럽게 */
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: flex-start;
       align-items: center;
       text-align: center;
+      padding-top: 4rem;
       padding-bottom: 2rem;
       overflow: hidden;
     }
-
     header::after {
       content: '';
       position: absolute;
@@ -42,6 +42,16 @@
       position: relative;
       z-index: 2;
       margin: 0.3rem 0;
+    }
+    .announcement-box {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
     }
     nav {
       background: #0055a5;
@@ -76,27 +86,16 @@
     }
   </style>
 </head>
-<body>
 
+<body>
 
 <header>
   <!-- 연구실 메인 타이틀 -->
-  <div style="position: relative; z-index: 2; text-align: center; padding-top: 4rem;">
-    <h1 style="font-size: 2.5rem; margin: 0;">Victoria's Research Lab</h1>
-    <p style="margin: 0.5rem 0 2rem;">Exploring AI, Hardware Optimization, and Wire/Wireless Sensing</p>
-  </div>
+  <h1>Victoria's Research Lab</h1>
+  <p>Exploring AI, Hardware Optimization, and Wire/Wireless Sensing</p>
 
   <!-- Announcements 블록 -->
-  <div style="
-    background: rgba(0, 0, 0, 0.6);
-    padding: 1.5rem;
-    margin: 2rem auto 1rem;
-    border-radius: 10px;
-    max-width: 600px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-  ">
+  <div class="announcement-box">
     <h2 style="margin-bottom: 1rem;">Announcements</h2>
     <p><strong>FAL (FPGAxAI Lab) Club Kick-off Meeting</strong></p>
     📅 <strong>Date:</strong> <span style="background: #ffeb3b; color: #333; padding: 0.2rem 0.4rem; border-radius: 4px;">Thursday, April 17</span><br>
@@ -115,7 +114,6 @@
   <a href="news.html">News</a>
   <a href="contact.html">Contact</a>
 </nav>
-
 
 <section id="about">
   <h2>About</h2>
