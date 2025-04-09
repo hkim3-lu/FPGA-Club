@@ -30,7 +30,6 @@
       padding-bottom: 2rem;
       overflow: hidden;
     }
-
     header::after {
       content: '';
       position: absolute;
@@ -61,22 +60,33 @@
       max-width: 1000px;
       margin: auto;
     }
-    .news-board {
+    .news {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1.8rem; /* 박스 사이 간격 크게 */
+      margin-top: 2rem;
     }
     .news-item {
-      border: 1px solid #ccc;
-      padding: 1.5rem;
-      border-radius: 5px;
       background: #f9f9f9;
-      transition: box-shadow 0.3s;
-      width: 100%;
-      box-sizing: border-box;
+      border: 1px solid #ddd;
+      padding: 1.2rem 1.5rem; /* 패딩 줄이기 */
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
     .news-item:hover {
-      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateY(-3px); /* 살짝 올라가는 효과 */
+    }
+    .news-item h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .news-item p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #555;
     }
     footer {
       text-align: center;
@@ -112,6 +122,7 @@
       <h3>04/17/2025 - FPGA-AI Club Kick-off Meeting</h3>
       <p>Join us for the FPGA-AI-Embedded Club's first meeting at 3:00 PM in AS138S. We look forward to seeing you!</p>
     </div>
+
     <div class="news-item">
       <h3>03/30/2025 - New Research Project Launched</h3>
       <p>Excited to announce a new research project focusing on low-power FPGA design techniques for AI acceleration.</p>
