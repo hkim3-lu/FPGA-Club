@@ -62,10 +62,15 @@
     }
     h2, h3 {
       margin-top: 2rem;
+      text-align: center;
     }
     ul {
       list-style: disc inside;
       margin-bottom: 2rem;
+    }
+    #club-info ul {
+      text-align: left;
+      display: inline-block;
     }
     footer {
       text-align: center;
@@ -74,16 +79,11 @@
       font-size: 0.9rem;
       margin-top: 2rem;
     }
-    #about-club, #activities, #goal {
+    #club-info {
       background-color: #f9f9f9;
       border-radius: 8px;
-      padding: 2rem 1rem;
+      padding: 3rem 1.5rem;
       margin-top: 2rem;
-      text-align: center;
-    }
-    #about-club ul, #activities ul, #goal ul {
-      text-align: left;
-      display: inline-block;
     }
     .highlight-date {
       background-color: #ffeb3b;
@@ -137,24 +137,25 @@
   We look forward to meeting you and building an inspiring research community together.</p>
 </section>
 
-<section id="about-club">
-  <h2>About the Club</h2>
-  <p>The <strong>FAL (FPGAxAI Lab) Club</strong> is a research-focused community dedicated to promoting innovation in FPGA design, AI integration, and embedded systems. Our mission is to create a platform where students interested in research can connect, collaborate, and grow together.</p>
-</section>
+<!-- Club Info (About + Activities + Goal 통합) -->
+<section id="club-info">
+  <div style="max-width: 800px; margin: auto; text-align: center;">
 
-<section id="activities">
-  <h2>Activities</h2>
-  <ul>
-    <li>Hands-on FPGA Development Workshops</li>
-    <li>Seminars on AI Technologies and Hardware Acceleration</li>
-    <li>Research and Project Collaboration</li>
-    <li>Student-led Discussion Forums and Networking</li>
-  </ul>
-</section>
+    <h2>About the Club</h2>
+    <p style="margin-bottom: 2rem;">The <strong>FAL (FPGAxAI Lab) Club</strong> is a research-focused community dedicated to promoting innovation in FPGA design, AI integration, and embedded systems. Our mission is to create a platform where students interested in research can connect, collaborate, and grow together.</p>
 
-<section id="goal">
-  <h2>Goal</h2>
-  <p>Our goal is to empower students to explore real-world applications by combining FPGA hardware and AI techniques, fostering innovative research, and helping members grow their skills in embedded system design and development through collaborative projects and technical activities.</p>
+    <h2>Activities</h2>
+    <ul>
+      <li>Hands-on FPGA Development Workshops</li>
+      <li>Seminars on AI Technologies and Hardware Acceleration</li>
+      <li>Research and Project Collaboration</li>
+      <li>Student-led Discussion Forums and Networking</li>
+    </ul>
+
+    <h2>Goal</h2>
+    <p>Our goal is to empower students to explore real-world applications by combining FPGA hardware and AI techniques, fostering innovative research, and helping members grow their skills in embedded system design and development through collaborative projects and technical activities.</p>
+
+  </div>
 </section>
 
 <footer>
