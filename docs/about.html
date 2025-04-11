@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       background: #ffffff;
-      color: #333333;
+      color: #333;
       line-height: 1.6;
       font-size: 1rem;
     }
@@ -30,11 +30,12 @@
       padding-bottom: 2rem;
       overflow: hidden;
     }
+
     header::after {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.4); /* 검정 반투명 레이어 */
       z-index: 1;
     }
     header h1, header p {
@@ -43,7 +44,7 @@
       margin: 0.3rem 0;
     }
     nav {
-      background: #800000; /* Lewis Maroon */
+      background: #0055a5;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -62,15 +63,10 @@
     }
     h2 {
       margin-top: 2rem;
-      color: #800000; /* 학제목 와인색 */
-    }
-    h3 {
-      color: #800000;
     }
     ul {
       list-style: disc inside;
       margin-bottom: 2rem;
-      color: #333333;
     }
     footer {
       text-align: center;
@@ -78,59 +74,6 @@
       background: #f4f4f4;
       font-size: 0.9rem;
       margin-top: 2rem;
-    }
-
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: #f5f5f5; /* 옅은 그레이 */
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      will-change: transform, box-shadow;
-    }
-
-    .card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .card h3 {
-      color: #800000;
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-      text-align: center;
-      border-bottom: 2px solid #800000;
-      padding-bottom: 0.5rem;
-      display: inline-block;
-    }
-
-    .card ul {
-      list-style: none;
-      padding-left: 0;
-      font-size: 0.95rem;
-      margin-top: 1rem;
-    }
-
-    .card ul li {
-      margin-bottom: 0.5rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-
-    .card ul li::before {
-      content: "▸"; /* 심플 삼각형 bullet */
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #800000; /* 포인트 와인색 */
     }
   </style>
 </head>
@@ -152,22 +95,135 @@
   <a href="contact.html">Contact</a>
 </nav>
 
+<!-- 🚧 공사중 알림 (맨 위로) -->
 <div style="text-align:center; margin-top: 1rem; font-style: italic; color: gray; font-size: 1.5rem;">
   🚧 This page is under construction. Thank you for your patience! 🚧
 </div>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: hkim3@lewisu.edu | vkym104@gmail.com | hkim104@hawk.iit.edu</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/victoria-kim-3a66b278/" target="_blank">Victoria Kim LinkedIn</a></p>
+</section>
 
 <section id="teaching">
   <h2>Teaching</h2>
 
   <div class="card-container">
-    <!-- 카드 예시들 (Fall 2025, Spring 2025 등) 여기에 위치 -->
+
+    <div class="card">
+      <h3>Fall 2025</h3>
+      <ul>
+        <li>ECEN22000 - Circuit Analysis 1</li>
+        <li>ECEN21000 - Logic Design</li>
+        <li>ECEN55000 - Robotics and Automation</li>
+        <li>ECEN54000 - Safety and Security of Internet of Things</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Spring 2025</h3>
+      <ul>
+        <li>ECEN22100 - Circuit Analysis 2</li>
+        <li>ECEN35000 - Electronic Circuits</li>
+        <li>ECEN32000 - Hardware and Software Systems</li>
+        <li>ECEN545000 - Real-Time Embedded Systems</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Fall 2024</h3>
+      <ul>
+        <li>ECEN10000 - Introduction to ECE</li>
+        <li>ECEN22000 - Circuit Analysis 1</li>
+        <li>ECEN21000 - Logic Design</li>
+        <li>ECEN55000 - Robotics and Automation</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Spring 2024</h3>
+      <ul>
+        <li>ECEN32000 - Hardware and Software Systems</li>
+        <li>ECEN522000 - Reliability and Analysis</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Fall 2023</h3>
+      <ul>
+        <li>ECEN21000 - Logic Design</li>
+        <li>CPSC245000 - Object-Oriented Programming (OOP)</li>
+      </ul>
+    </div>
+
   </div>
 </section>
+
+
+<style>
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    background: #f5f5f5; /* ★ 옅은 그레이 배경 */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+  }
+
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .card h3 {
+    color: #800020; /* ★ 와인색 강조 */
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    border-bottom: 2px solid #800020; /* ★ 학기명 아래 와인색 밑줄 */
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  .card ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .card ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #800020; /* 와인색 포인트 */
+}
+</style>
+
+
+
+
 
 <section>
   <h2>Education</h2>
   <ul>
-    <li>Ph.D. in Computer Engineering, Illinois Institute of Technology, 2025</li>
+    <li>Ph.D. in Computer Engineering, Illinois Institute of Technology, 2025 </li>
     <li>M.S. in Electrical Engineering, Illinois Institute of Technology, 2015</li>
     <li>B.S. in Electrical and Electronic Engineering, Hongik University, 2012</li>
   </ul>
